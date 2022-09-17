@@ -1,0 +1,15 @@
+{
+  "name": "web3-utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "jamie <starit1992@gmail.com>",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bignumber.js": "^9.0.2",
+    "bip39": "^3.0.4",
+    "dotenv-flow": "^3.2.0",
+    "ethers": "^5.7.0",
+    "web3": "^1.4.0"
+  }
+}
