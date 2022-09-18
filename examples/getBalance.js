@@ -1,5 +1,4 @@
-const { provider, wallet, currentAccount } = require('../web3')
-const { ethers } = require("ethers");å
+const { ethers, provider, wallet, currentAccount } = require('../web3')
 
 const main = async () => {
   const balance = await wallet.getBalance()

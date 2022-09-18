@@ -2,9 +2,9 @@ require('dotenv-flow').config();
 const { ethers } = require("ethers");
 const pkProvider = require('./pkProvider')
 const networkProvider = require('./networkProvider')
-
+const network = process.env.NETWORK_NAME || networkProvider.currentNetwork.rpc
 // For more info, visit: https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider
-const provider = ethers.getDefaultProvider(process.env.NETWORK_NAME, {
+const provider = ethers.getDefaultProvider(network, {
   etherscan: process.env.YOUR_ETHERSCAN_API_KEY,
   infura: process.env.YOUR_INFURA_PROJECT_ID,
   // Or if using a project secret:

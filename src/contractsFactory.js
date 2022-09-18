@@ -1,6 +1,7 @@
 const { ethers, provider, wallet, currentAccount } = require('../web3')
 const { contracts, tokens } = require('../config')
 const erc20ABI = require('../abi/ERC20.json')
+const wethABI = require('../abi/WETH.json')
 // const erc721ABI = require('../abi/ERC721.json')
 const uniswapV2Route2ABI = require('../abi/uniswap/uniswapV2Route2.json')
 const uniswapV2FactoryABI = require('../abi/uniswap/uniswapV2Factory.json')
@@ -11,7 +12,8 @@ const oneSplitABI = require('../abi/1inch/oneSplit.json')
 const erc20TokenList = {
     'usdt': [tokens.usdt, erc20ABI],
     'usdc': [tokens.usdc, erc20ABI],
-    'dai': [tokens.dai, erc20ABI]
+    'dai': [tokens.dai, erc20ABI],
+    'weth': [tokens.weth, wethABI]
 }
 
 const contractList = {
@@ -36,10 +38,13 @@ const getAllContracts = () => {
 
     const oneSplit = new ethers.Contract(contracts.oneSplit, oneSplitABI, wallet)
 
+    const weth = new ethers.Contract(tokens.weth, wethABI, wallet)
+
     return {
         'uniswapV2Factory': uniswapV2Factory,
         'uniswapV2Route2': uniswapV2Route2,
-        'oneSplit': oneSplit
+        'oneSplit': oneSplit,
+        'weth': weth,
     }
 }
 
