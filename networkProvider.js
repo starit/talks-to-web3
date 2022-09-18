@@ -25,10 +25,16 @@ const networks = {
   },
   optimism: {
     rpc: 'https://mainnet.optimism.io/'
+  },
+  ETHW: {
+    rpc: 'https://mainnet.ethereumpow.org'
+  },
+  ETHFair: {
+    rpc: 'https://rpc.etherfair.org'
   }
 }
 
 
 module.exports = {
-  currentNetwork: networks.mainnet
+  currentNetwork: networks.ETHW
 }
