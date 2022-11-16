@@ -3,7 +3,7 @@ const { cBN } = require('../src/utils')
 
 
 const main = async () => {
-    const toAddress = '0xF66f4637610Ef5e78d963Ce2f0507423810e537f'
+    const toAddress = ''
     const walletBalance = await wallet.getBalance()
     console.log('wallet balance', walletBalance.toString(), walletBalance)
     const remainingETH = new ethers.BigNumber.from(10).pow(17)

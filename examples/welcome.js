@@ -39,9 +39,9 @@ const showGasPrice = async () => {
 
 const main = async () => {
   showFirstMsg()
-  await showTotalAssetsValue()
+  // await showTotalAssetsValue()
   await showMajorMarketInfo()
-  await showGasPrice()
+  // await showGasPrice()
 }
 
 main()

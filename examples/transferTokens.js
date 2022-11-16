@@ -3,10 +3,14 @@ const { tokens, contracts } = require('../config')
 const { cBN } = require('../src/utils')
 const erc20ABI = require('../abi/ERC20.json')
 
-const tokensToTransfer = tokens
 
 const main = async () => {
-    const toAddress = '0xcc1194930B624b94f0365143c18645a329794366'
+    const toAddress = ''
+    // const tokensToTransfer = tokens
+    const tokensToTransfer = {
+        usdt: '',
+        usdc: '',
+    }
     console.log('current account', wallet.address)
 
     // check balance, if balance > 0 then transfer

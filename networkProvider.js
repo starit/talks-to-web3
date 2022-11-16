@@ -36,5 +36,5 @@ const networks = {
 
 
 module.exports = {
-  currentNetwork: networks.ETHW
+  currentNetwork: networks.mainnet
 }
