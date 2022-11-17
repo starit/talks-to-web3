@@ -10,6 +10,12 @@ It will provide the following functions:
   2. Integrated multiple centralized existing products and services.
   3. Modularized Scability
 
+## Folder Structure
+
+* `src/protocols`: wrap operation that interact with smart contracts
+* `src/products`: wrap operation that intereact with third-party products  
+* `src/agents`: wrap operations based on `protocols` and `products`
+
 ## Data flow
 
 Usually, the data requested from on-chain is current and direct data. It cannot get the accumulated data unless the protocol has recorded it as a smart contract variable.
@@ -30,16 +36,12 @@ For the second kind of data, it's usually strong related to one specific account
 
 For the third kind of data, sign a message or transaction is required. It will be used only after a wallet has been connected.
 
-## web3-agents.js
-
-This is a basic template for building web3 command line scripts. 
-
 
 ## Usage
 
-1. `cp .env.example .env`
-2. fill out the info
-3. write your own scripts with your requirements
+1. run `cp .env.example .env` and fill out related info in `.env`
+2. try `node examples/welcome.js`
+3. write your own scripts with your own requirements
 
 ## Stack
 
